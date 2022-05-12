@@ -85,49 +85,44 @@ $(function () {
 
 
 
-  // var allSum = 0
+  var allSum = 0
 
-  // $('.graph__item').each(function () {
-  //   var sum = $(this).find('.graph__item-summ').attr('data-summ');
-  //   allSum += parseFloat(sum)
-  //   var persent = allSum / 100;
-  //   var newHeight = 8 * (sum / persent);
+  $('.graph__item').each(function () {
+    var sum = $(this).find('.graph__item-summ').attr('data-summ');
+    allSum += parseFloat(sum)
+    var persent = allSum / 100;
+    var newHeight = 8 * (sum / persent);
     
-  //   $(this).find('.graph__item-col').animate({
-  //     height: newHeight,
-  //   }, 4000);
-  //   $(this).find('.graph__item-summ').text('$ ' + sum.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
-  // });
+    $(this).find('.graph__item-col').animate({
+      height: newHeight,
+    }, 4000);
+    $(this).find('.graph__item-summ').text('$ ' + sum.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+  });
 
 
 
 
-// ------------------------------------------ //
 
 
-  // $('.graph__item').each(function () {
-  //   var newHeight = $(this).find('.graph__item-col').attr('data-height');
-  //   $(this).find('.graph__item-col').animate({
-  //     height: newHeight,
-  //   }, 4000);
-  // });
+
+
   
 
   // -------------- scroll to block ---------- //
 
 
-  $(window).scroll(function(){
-    var scrolltop = $(this).scrollTop();
-    var topHeight = $('.aboutus').height();
-      if(scrolltop >= topHeight) {
-        $('.graph__item').each(function () {
-          var newHeight = $(this).find('.graph__item-col').attr('data-height');
-          $(this).find('.graph__item-col').animate({
-            height: newHeight,
-          }, 2500);
-        });
-      }
-  });
+  // $(window).scroll(function(){
+  //   var scrolltop = $(this).scrollTop();
+  //   var topHeight = $('.aboutus').height();
+  //     if(scrolltop >= topHeight) {
+  //       $('.graph__item').each(function () {
+  //         var newHeight = $(this).find('.graph__item-col').attr('data-height');
+  //         $(this).find('.graph__item-col').animate({
+  //           height: newHeight,
+  //         }, 2500);
+  //       });
+  //     }
+  // });
 
 
 
